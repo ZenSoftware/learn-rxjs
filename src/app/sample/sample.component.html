@@ -1,0 +1,17 @@
+<button type="button" class="btn btn-primary" (click)="clear()">
+  <i class="fa-solid fa-fw fa-eraser"></i>
+  Clear
+</button>
+<div>
+  <button type="button" class="btn btn-primary" (click)="concatMap()">concatMap</button>
+  <button type="button" class="btn btn-primary" (click)="mergeMap()">mergeMap</button>
+</div>
+
+<div>
+  <button type="button" class="btn btn-primary" (click)="share1Sub()">share1Sub</button>
+  <button type="button" class="btn btn-primary" (click)="share2Sub()">share2Sub</button>
+  <button type="button" class="btn btn-primary" (click)="share1Unsub()">share1Unsub</button>
+  <button type="button" class="btn btn-primary" (click)="share2Unsub()">share2Unsub</button>
+</div>
+
+<zen-logger [logs]="logs"></zen-logger>

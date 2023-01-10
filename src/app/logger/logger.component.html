@@ -1,0 +1,26 @@
+<div class="card">
+  <div #containerTmp class="card-body" style="overflow-y: scroll;" [ngStyle]="{'height': height}">
+    <table #tableTmp>
+      <tr *ngFor="let log of logs" style="border-bottom: 1px solid rgb(91, 91, 91);">
+        <td class="pe-1" style="vertical-align: top;">
+          <strong>{{log.title}}</strong>
+        </td>
+        <td *ngIf="log.type === 'subscribe'">
+          <pre class="m-0">subscribe</pre>
+        </td>
+        <td *ngIf="log.type === 'unsubscribe'">
+          <pre class="m-0">unsubscribe</pre>
+        </td>
+        <td *ngIf="log.type === 'next'">
+          <pre class="text-info m-0">{{log.value}}</pre>
+        </td>
+        <td *ngIf="log.type === 'complete'">
+          <pre class="text-success m-0">complete</pre>
+        </td>
+        <td *ngIf="log.type === 'error'">
+          <pre class="text-danger m-0">{{log.value | json}}</pre>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
